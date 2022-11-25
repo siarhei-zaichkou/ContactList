@@ -1,5 +1,3 @@
-import Foundation
-
 
 struct Person {
     let name: String
@@ -14,22 +12,34 @@ struct Person {
 extension Person {
     static func getPersonsList() -> [Person] {
         var persons: [Person] = []
-        let data = DataStore.shared
-        for _ in data.names {
-            let name = data.names.randomElement()!
-            data.names.remove(at: data.names.firstIndex(of: name)!)
-            guard let surname = data.surnames.randomElement() else { return persons}
-            data.surnames.remove(at: data.surnames.firstIndex(of: surname)!)
-            guard let email = data.emails.randomElement() else { return persons}
-            data.emails.remove(at: data.emails.firstIndex(of: email)!)
-            guard let phone = data.phones.randomElement() else { return persons }
-            data.phones.remove(at: data.phones.firstIndex(of: phone)!)
-            
+        
+        let names = DataStore.shared.names.shuffled()
+        let surnames = DataStore.shared.surnames.shuffled()
+        let emails = DataStore.shared.emails.shuffled()
+        let phones = DataStore.shared.phones.shuffled()
+        
+        let iterationCount = min(
+            names.count,
+            surnames.count,
+            emails.count,
+            phones.count
+        )
+        
+        for index in 0..<iterationCount {
             persons.append(
-                Person(name: name, surname: surname, email: email, phone: phone)
+                Person(
+                    name: names[index],
+                    surname: surnames[index],
+                    email: emails[index],
+                    phone: phones[index]
+                )
             )
         }
         return persons
     }
 }
 
+enum Contacts: String {
+    case phone = "phone"
+    case email = "tray"
+}

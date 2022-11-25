@@ -16,6 +16,8 @@
 		A58F559B292EC1F100DB147B /* DataStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = A58F559A292EC1F100DB147B /* DataStore.swift */; };
 		A58F559E292EE9BD00DB147B /* PersonsListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A58F559D292EE9BD00DB147B /* PersonsListViewController.swift */; };
 		A58F55A0292EF78E00DB147B /* PersonDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A58F559F292EF78E00DB147B /* PersonDetailsViewController.swift */; };
+		A58F55A62931450400DB147B /* TabBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A58F55A52931450400DB147B /* TabBarViewController.swift */; };
+		A58F55AC293158BA00DB147B /* SectionTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A58F55AB293158BA00DB147B /* SectionTableViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -30,6 +32,8 @@
 		A58F559A292EC1F100DB147B /* DataStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataStore.swift; sourceTree = "<group>"; };
 		A58F559D292EE9BD00DB147B /* PersonsListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonsListViewController.swift; sourceTree = "<group>"; };
 		A58F559F292EF78E00DB147B /* PersonDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonDetailsViewController.swift; sourceTree = "<group>"; };
+		A58F55A52931450400DB147B /* TabBarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarViewController.swift; sourceTree = "<group>"; };
+		A58F55AB293158BA00DB147B /* SectionTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SectionTableViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -62,15 +66,11 @@
 		A58F5582292EBF9300DB147B /* ContactList */ = {
 			isa = PBXGroup;
 			children = (
-				A58F5583292EBF9300DB147B /* AppDelegate.swift */,
-				A58F5585292EBF9300DB147B /* SceneDelegate.swift */,
-				A58F5589292EBF9300DB147B /* Main.storyboard */,
-				A58F559F292EF78E00DB147B /* PersonDetailsViewController.swift */,
-				A58F559D292EE9BD00DB147B /* PersonsListViewController.swift */,
+				A58F55A8293152BC00DB147B /* App */,
+				A58F55A9293152E700DB147B /* Storyboards */,
+				A58F55A72931527D00DB147B /* ViewControllers */,
 				A58F5599292EC0D800DB147B /* Models */,
-				A58F558C292EBF9600DB147B /* Assets.xcassets */,
-				A58F558E292EBF9600DB147B /* LaunchScreen.storyboard */,
-				A58F5591292EBF9600DB147B /* Info.plist */,
+				A58F55AA2931530800DB147B /* Resources */,
 				A58F559C292EC84400DB147B /* Services */,
 			);
 			path = ContactList;
@@ -90,6 +90,44 @@
 				A58F559A292EC1F100DB147B /* DataStore.swift */,
 			);
 			path = Services;
+			sourceTree = "<group>";
+		};
+		A58F55A72931527D00DB147B /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				A58F55A52931450400DB147B /* TabBarViewController.swift */,
+				A58F559F292EF78E00DB147B /* PersonDetailsViewController.swift */,
+				A58F559D292EE9BD00DB147B /* PersonsListViewController.swift */,
+				A58F55AB293158BA00DB147B /* SectionTableViewController.swift */,
+			);
+			path = ViewControllers;
+			sourceTree = "<group>";
+		};
+		A58F55A8293152BC00DB147B /* App */ = {
+			isa = PBXGroup;
+			children = (
+				A58F5583292EBF9300DB147B /* AppDelegate.swift */,
+				A58F5585292EBF9300DB147B /* SceneDelegate.swift */,
+				A58F5591292EBF9600DB147B /* Info.plist */,
+			);
+			path = App;
+			sourceTree = "<group>";
+		};
+		A58F55A9293152E700DB147B /* Storyboards */ = {
+			isa = PBXGroup;
+			children = (
+				A58F5589292EBF9300DB147B /* Main.storyboard */,
+				A58F558E292EBF9600DB147B /* LaunchScreen.storyboard */,
+			);
+			path = Storyboards;
+			sourceTree = "<group>";
+		};
+		A58F55AA2931530800DB147B /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				A58F558C292EBF9600DB147B /* Assets.xcassets */,
+			);
+			path = Resources;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -167,7 +205,9 @@
 				A58F559E292EE9BD00DB147B /* PersonsListViewController.swift in Sources */,
 				A58F55A0292EF78E00DB147B /* PersonDetailsViewController.swift in Sources */,
 				A58F5584292EBF9300DB147B /* AppDelegate.swift in Sources */,
+				A58F55A62931450400DB147B /* TabBarViewController.swift in Sources */,
 				A58F5598292EC0D000DB147B /* Person.swift in Sources */,
+				A58F55AC293158BA00DB147B /* SectionTableViewController.swift in Sources */,
 				A58F5586292EBF9300DB147B /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -318,7 +358,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = ContactList/Info.plist;
+				INFOPLIST_FILE = ContactList/App/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
@@ -345,7 +385,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = ContactList/Info.plist;
+				INFOPLIST_FILE = ContactList/App/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
